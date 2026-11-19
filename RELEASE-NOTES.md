@@ -5,6 +5,11 @@
 * Added REST API version modules for v10.13 and v10.16, enabling sessions and
   resources that require those API versions (for example, IPFIX, Traffic
   Insight, MACsec policies, and client probe profiles).
+* Fixed `VrfAddressFamily.update()`: the PUT body now includes the required
+  `address_family` key, so import/export route targets of an existing VRF
+  address family can be updated.
+* Fixed duplicated entries in `Vrf.address_families`: a `VrfAddressFamily` is
+  now registered exactly once in its parent VRF.
 
 # 2.6.0
 
