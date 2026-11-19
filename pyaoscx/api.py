@@ -162,7 +162,9 @@ class API(ABC):
             "StaticNexthop": "static_nexthop",
             "PoEInterface": "poe_interface",
             "RadiusDynamicAuthorization": "radius_dynamic_authorization",
-            "RadiusDynamicAuthorizationClient": "radius_dynamic_authorization_client",
+            "RadiusDynamicAuthorizationClient": (
+                "radius_dynamic_authorization_client"
+            ),
             "AaaAccountingAttributes": "aaa_accounting_attributes",
             "AaaServerGroupPrio": "aaa_server_group_prio",
             "Aaa": "aaa",
@@ -202,13 +204,19 @@ class API(ABC):
             "Stp": "stp",
             "EvpnVlanAwareBundle": "evpn_vlan_aware_bundle",
             "RadiusDynauthProxyServer": "radius_dynauth_proxy_server",
-            "RadiusDynauthProxyClientGroup": "radius_dynauth_proxy_client_group",
+            "RadiusDynauthProxyClientGroup": (
+                "radius_dynauth_proxy_client_group"
+            ),
             "RadiusDynauthProxyProfile": "radius_dynauth_proxy_profile",
             "RadiusProxyClientGroup": "radius_proxy_client_group",
             "RadiusProxyProfile": "radius_proxy_profile",
             "RadiusConfigAttribute": "radius_config_attribute",
             "ClientProbeProfile": "client_probe_profile",
             "ClientProbeProfileEntry": "client_probe_profile_entry",
+            "NaeScript": "nae_script",
+            "NaeAgent": "nae_agent",
+            "NaeLiteAgent": "nae_lite_agent",
+            "NaeLiteCondition": "nae_lite_condition",
         }
         if name not in module_names:
             raise ParameterError(
