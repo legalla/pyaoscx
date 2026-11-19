@@ -2,6 +2,15 @@
 
 ## Notable Changes
 
+* Added `Configuration.upload_switch_config_cli_from_local()` and the
+  `config_cli` / `operation` parameters of
+  `Configuration.upload_switch_config()` to upload a local configuration in
+  CLI format directly in the request payload (`PUT /configs/{name}`, no TFTP
+  server needed), with `replace` (default) or `merge` operation.
+  `Session.request()` accepts an optional `headers` parameter.
+  When the switch rejects commands (HTTP 200 with `"state": "failure"`),
+  a new `ConfigUploadError` is raised; its `errors` attribute holds the
+  switch errors (`line`, `context`, `command`, `message`).
 * Added `Interface.set_inter_vxlan_bridging_mode()` and an optional
   `inter_vxlan_bridging_mode` parameter to `Interface.configure_vxlan()` to
   manage the inter-VXLAN bridging mode (`deny`, `static-evpn`, `static-all`)
