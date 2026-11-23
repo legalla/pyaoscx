@@ -196,6 +196,7 @@ class API(ABC):
             "Class": "traffic_class",
             "ClassEntry": "class_entry",
             "PortAccessRole": "port_access_role",
+            "PortAccessAuthConfiguration": "port_access_auth_configuration",
             "PortAccessGbp": "port_access_gbp",
             "PortAccessAbp": "port_access_abp",
             "PortAccessPolicy": "port_access_policy",
