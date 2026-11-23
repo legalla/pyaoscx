@@ -192,6 +192,7 @@ class API(ABC):
             "AaaServerGroup": "aaa_server_group",
             "RadiusServer": "radius_server",
             "TacacsServer": "tacacs_server",
+            "GbpRole": "gbp_role",
             "PortAccessGbp": "port_access_gbp",
             "PortAccessAbp": "port_access_abp",
             "PortAccessPolicy": "port_access_policy",
