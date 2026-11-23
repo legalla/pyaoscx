@@ -202,6 +202,8 @@ class API(ABC):
             "Vni": "vni",
             "User": "user",
             "Stp": "stp",
+            "Evpn": "evpn",
+            "EvpnVlan": "evpn_vlan",
             "EvpnVlanAwareBundle": "evpn_vlan_aware_bundle",
             "RadiusDynauthProxyServer": "radius_dynauth_proxy_server",
             "RadiusDynauthProxyClientGroup": (
