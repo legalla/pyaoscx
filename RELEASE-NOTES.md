@@ -24,6 +24,9 @@
   `invalid attribute: <name>`. A CLI configuration upload refused with HTTP
   400, 404, 405 or 415 raises a `GenericOperationError` stating that the CLI
   format upload is probably not supported by the switch.
+* Added `Device.set_virtual_mac()` to set or remove the global virtual MAC
+  (CLI `virtual-mac`), advertised by EVPN as the router MAC of the symmetric
+  IRB routes (`virtual_mac` attribute of `PUT /system`).
 
 * Added REST API version modules for v10.13 and v10.16, enabling sessions and
   resources that require those API versions (for example, IPFIX, Traffic
