@@ -31,6 +31,13 @@
   enforcement (CLI `gbp enable`, `GBP_enable` attribute of `PUT /system`).
 * Added the `GbpRole` class to create, update or delete Group Based Policy
   roles (CLI `gbp role <name> <id>`, `system/gbp_role_name_id_maps`).
+* Added the `Class` (`pyaoscx.traffic_class`) and `ClassEntry`
+  (`pyaoscx.class_entry`) classes to manage traffic classes and their entries
+  (CLI `class ip|ipv6|mac|gbp-ip|gbp-ipv6|gbp-mac|abp-ip|abp-ipv6`,
+  `system/classes/{name},{type}`), required by the `aoscx_class` module.
+* Added the `PortAccessRole` class to manage local port access roles (CLI
+  `port-access role <name>`, `system/port_access_roles`), required by the
+  `aoscx_port_access_role` module.
 
 * Added REST API version modules for v10.13 and v10.16, enabling sessions and
   resources that require those API versions (for example, IPFIX, Traffic
