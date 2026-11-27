@@ -76,6 +76,16 @@
   enabled together. The extended global switches are the
   `arp_suppression_extended_enable` and `nd_suppression_extended_enable`
   attributes of `Evpn`.
+* Added `Interface.set_local_proxy_arp_ip_exemption()` to manage the IPv4
+  addresses excluded from local proxy ARP on an interface (CLI
+  `ip local-proxy-arp exclude <ip_address>` in the `interface vlan <id>`
+  context; `local_proxy_arp_ip_exemption` attribute of
+  `/system/interfaces`). The list replaces the current one, is compared
+  regardless of order and duplicates, takes IPv4 addresses only (the switch
+  REST API also accepts IPv6 ones, the CLI does not) with at most 256 entries,
+  and an empty list removes all the exclusions. Changes are sent on `apply()`.
+  A firmware that does not return the attribute raises
+  `UnsupportedCapabilityError`.
 * `GenericOperationError` states that the attribute is probably not supported
   by the switch platform or firmware version when the switch answers HTTP 400
   `invalid attribute: <name>` or `cannot modify the attribute: <name>,
